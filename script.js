@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const teamsCountInput = document.getElementById('teams-count');
-    const submitTeamsCountBtn = document.getElementById('submit-teams-count');
     const teamsInputContainer = document.getElementById('teams-input-container');
     const startLotteryBtn = document.getElementById('start-lottery');
     const drawPickBtn = document.getElementById('draw-pick');
@@ -13,11 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let teams = [];
     let draftOrder = [];
 
-    submitTeamsCountBtn.addEventListener('click', () => {
+    teamsCountInput.addEventListener('input', () => {
         const count = parseInt(teamsCountInput.value, 10);
         if (count > 0) {
             generateTeamInputs(count);
             startLotteryBtn.style.display = 'block';
+        } else {
+            teamsInputContainer.innerHTML = '';
+            startLotteryBtn.style.display = 'none';
         }
     });
 
@@ -135,6 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    generateTeamInputs(parseInt(teamsCountInput.value, 10));
-    startLotteryBtn.style.display = 'block';
+    const initialCount = parseInt(teamsCountInput.value, 10);
+    if (initialCount > 0) {
+        generateTeamInputs(initialCount);
+        startLotteryBtn.style.display = 'block';
+    }
 });
