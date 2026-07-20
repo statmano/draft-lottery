@@ -187,6 +187,7 @@ button:disabled {
     background: #3949ab;
     color: #fff;
     font-weight: bold;
+    
 }
 .teams-table input[type="text"] {
     width: 100%;
@@ -206,7 +207,7 @@ button:disabled {
 
 .teams-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 76px;
+    grid-template-columns: minmax(0, 1fr) 96px;
     gap: 8px 12px;
     align-items: center;
     width: 100%;
@@ -221,7 +222,7 @@ button:disabled {
     font-weight: bold;
     background: linear-gradient(135deg, #173a63 0%, #0f2748 100%);
     color: #f5fff9;
-    padding: 8px 4px;
+    padding: 20px 4px;
     text-align: center;
     border-radius: 4px 0 0 4px;
     border: 1px solid rgba(145, 233, 189, 0.7);

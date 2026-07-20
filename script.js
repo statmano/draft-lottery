@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add header row
         grid.innerHTML = `
             <div class="teams-grid-header">Team Name</div>
-            <div class="teams-grid-header">Lottery Balls</div>
+            <div class="teams-grid-header"># of Balls</div>
         `;
         // Add input rows
         for (let i = 0; i < count; i++) {
